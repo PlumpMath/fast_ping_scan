@@ -1,3 +1,5 @@
+#! python3
+
 from ping import do_one
 from multiprocessing import Pool
 
