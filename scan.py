@@ -14,5 +14,5 @@ if __name__ == '__main__':
     res = [pool.apply_async(f, (argv[1], i)) for i in range(2, 255)]#list(range(2,255))))
     res = [res.get(timeout=3) for res in res]
     for i in range(len(res)):
-      if res[i]: print('%s.%d\t%f' % (argv[1], i+2, res[i]))
+      if type(res[i]) is float : print('%s.%d\t%f' % (argv[1], i+2, res[i]))
   print(time()-t, 'seconds')
